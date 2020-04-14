@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Internal vctrs functions — chex-vctrs • chex</title>
+<title><code>result</code> vector — result • chex</title>
 
 
 <!-- jquery -->
@@ -39,8 +39,8 @@
 
 
 
-<meta property="og:title" content="Internal vctrs functions — chex-vctrs" />
-<meta property="og:description" content="Internal vctrs functions" />
+<meta property="og:title" content="<code>result</code> vector — result" />
+<meta property="og:description" content="result vector" />
 
 
 
@@ -108,26 +108,24 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Internal vctrs functions</h1>
-    <small class="dont-index">Source: <a href='https://github.com/shunsambongi/chex/blob/master/R/chex-package.R'><code>R/chex-package.R</code></a>, <a href='https://github.com/shunsambongi/chex/blob/master/R/result.R'><code>R/result.R</code></a>, <a href='https://github.com/shunsambongi/chex/blob/master/R/status.R'><code>R/status.R</code></a></small>
-    <div class="hidden name"><code>chex-vctrs.Rd</code></div>
+    <h1><code>result</code> vector</h1>
+    <small class="dont-index">Source: <a href='https://github.com/shunsambongi/chex/blob/master/R/result.R'><code>R/result.R</code></a></small>
+    <div class="hidden name"><code>result.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Internal vctrs functions</p>
+    <p><code>result</code> vector</p>
     </div>
 
-    <pre class="usage"><span class='co'># S3 method for chex_result</span>
-<span class='fu'>vec_ptype2</span>(<span class='no'>x</span>, <span class='no'>y</span>, <span class='no'>...</span>)
+    <pre class="usage"><span class='fu'>result</span>(
+  <span class='no'>status</span>,
+  <span class='kw'>details</span> <span class='kw'>=</span> <span class='kw pkg'>chex</span><span class='kw ns'>::</span><span class='fu'>details</span>(<span class='no'>status</span>) <span class='kw'>%||%</span> <span class='fl'>NA_character_</span>,
+  <span class='kw'>description</span> <span class='kw'>=</span> <span class='fl'>NA_character_</span>
+)
 
-<span class='co'># S3 method for chex_result</span>
-<span class='fu'>vec_cast</span>(<span class='no'>x</span>, <span class='no'>to</span>, <span class='no'>...</span>)
+<span class='fu'>as_result</span>(<span class='no'>x</span>, <span class='no'>...</span>)
 
-<span class='co'># S3 method for chex_status</span>
-<span class='fu'>vec_ptype2</span>(<span class='no'>x</span>, <span class='no'>y</span>, <span class='no'>...</span>)
-
-<span class='co'># S3 method for chex_status</span>
-<span class='fu'>vec_cast</span>(<span class='no'>x</span>, <span class='no'>to</span>, <span class='no'>...</span>)</pre>
+<span class='fu'>is_result</span>(<span class='no'>x</span>)</pre>
 
 
 

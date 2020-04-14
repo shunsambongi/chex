@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Internal vctrs functions — chex-vctrs • chex</title>
+<title><code>status</code> vector — status • chex</title>
 
 
 <!-- jquery -->
@@ -39,8 +39,10 @@
 
 
 
-<meta property="og:title" content="Internal vctrs functions — chex-vctrs" />
-<meta property="og:description" content="Internal vctrs functions" />
+<meta property="og:title" content="<code>status</code> vector — status" />
+<meta property="og:description" content="This creates a character vector that represents the result status of a check.
+Any status that is created will be changed to all uppercase, i.e.
+status(&quot;pass&quot;) == status(&quot;PASS&quot;)." />
 
 
 
@@ -108,27 +110,35 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Internal vctrs functions</h1>
-    <small class="dont-index">Source: <a href='https://github.com/shunsambongi/chex/blob/master/R/chex-package.R'><code>R/chex-package.R</code></a>, <a href='https://github.com/shunsambongi/chex/blob/master/R/result.R'><code>R/result.R</code></a>, <a href='https://github.com/shunsambongi/chex/blob/master/R/status.R'><code>R/status.R</code></a></small>
-    <div class="hidden name"><code>chex-vctrs.Rd</code></div>
+    <h1><code>status</code> vector</h1>
+    <small class="dont-index">Source: <a href='https://github.com/shunsambongi/chex/blob/master/R/status.R'><code>R/status.R</code></a></small>
+    <div class="hidden name"><code>status.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Internal vctrs functions</p>
+    <p>This creates a character vector that represents the result status of a check.
+Any status that is created will be changed to all uppercase, i.e.
+<code>status("pass") == status("PASS")</code>.</p>
     </div>
 
-    <pre class="usage"><span class='co'># S3 method for chex_result</span>
-<span class='fu'>vec_ptype2</span>(<span class='no'>x</span>, <span class='no'>y</span>, <span class='no'>...</span>)
+    <pre class="usage"><span class='fu'>status</span>(<span class='no'>x</span>)
 
-<span class='co'># S3 method for chex_result</span>
-<span class='fu'>vec_cast</span>(<span class='no'>x</span>, <span class='no'>to</span>, <span class='no'>...</span>)
+<span class='fu'>is_status</span>(<span class='no'>x</span>)
 
-<span class='co'># S3 method for chex_status</span>
-<span class='fu'>vec_ptype2</span>(<span class='no'>x</span>, <span class='no'>y</span>, <span class='no'>...</span>)
+<span class='fu'>as_status</span>(<span class='no'>x</span>)</pre>
 
-<span class='co'># S3 method for chex_status</span>
-<span class='fu'>vec_cast</span>(<span class='no'>x</span>, <span class='no'>to</span>, <span class='no'>...</span>)</pre>
-
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>x</th>
+      <td><ul>
+<li><p>For <code>status()</code>: A character vector</p></li>
+<li><p>For <code>is_status()</code>: An object to test</p></li>
+<li><p>For <code>as_status()</code>: An object to cast</p></li>
+</ul></td>
+    </tr>
+    </table>
 
 
   </div>

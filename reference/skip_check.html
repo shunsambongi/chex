@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Internal vctrs functions — chex-vctrs • chex</title>
+<title>Skip the current check — skip_check • chex</title>
 
 
 <!-- jquery -->
@@ -39,8 +39,9 @@
 
 
 
-<meta property="og:title" content="Internal vctrs functions — chex-vctrs" />
-<meta property="og:description" content="Internal vctrs functions" />
+<meta property="og:title" content="Skip the current check — skip_check" />
+<meta property="og:description" content="Call this function from inside of a check function to stop checking and quit
+the check early." />
 
 
 
@@ -108,27 +109,27 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Internal vctrs functions</h1>
-    <small class="dont-index">Source: <a href='https://github.com/shunsambongi/chex/blob/master/R/chex-package.R'><code>R/chex-package.R</code></a>, <a href='https://github.com/shunsambongi/chex/blob/master/R/result.R'><code>R/result.R</code></a>, <a href='https://github.com/shunsambongi/chex/blob/master/R/status.R'><code>R/status.R</code></a></small>
-    <div class="hidden name"><code>chex-vctrs.Rd</code></div>
+    <h1>Skip the current check</h1>
+    <small class="dont-index">Source: <a href='https://github.com/shunsambongi/chex/blob/master/R/check_that.R'><code>R/check_that.R</code></a></small>
+    <div class="hidden name"><code>skip_check.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Internal vctrs functions</p>
+    <p>Call this function from inside of a check function to stop checking and quit
+the check early.</p>
     </div>
 
-    <pre class="usage"><span class='co'># S3 method for chex_result</span>
-<span class='fu'>vec_ptype2</span>(<span class='no'>x</span>, <span class='no'>y</span>, <span class='no'>...</span>)
+    <pre class="usage"><span class='fu'>skip_check</span>(<span class='kw'>details</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)</pre>
 
-<span class='co'># S3 method for chex_result</span>
-<span class='fu'>vec_cast</span>(<span class='no'>x</span>, <span class='no'>to</span>, <span class='no'>...</span>)
-
-<span class='co'># S3 method for chex_status</span>
-<span class='fu'>vec_ptype2</span>(<span class='no'>x</span>, <span class='no'>y</span>, <span class='no'>...</span>)
-
-<span class='co'># S3 method for chex_status</span>
-<span class='fu'>vec_cast</span>(<span class='no'>x</span>, <span class='no'>to</span>, <span class='no'>...</span>)</pre>
-
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>details</th>
+      <td><p>A character vector of size 1 with any details about why the
+check was skipped</p></td>
+    </tr>
+    </table>
 
 
   </div>
