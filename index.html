@@ -77,6 +77,25 @@
 <div class="sourceCode" id="cb1"><pre class="r"><span class="co"># install.packages("devtools")</span>
 <span class="kw pkg">devtools</span><span class="kw ns">::</span><span class="fu">install_github</span>(<span class="st">"shunsambongi/chex"</span>)</pre></div>
 </div>
+<div id="example" class="section level2">
+<h2 class="hasAnchor">
+<a href="#example" class="anchor"></a>Example</h2>
+<p><code><a href="reference/check_that.html">check_that()</a></code> takes an object you want to check, and a number of checks to run against the object. A check is usually a function that takes the object as the first argument and returns a boolean value of whether the check passed (<code>TRUE</code>) or failed (<code>FALSE</code>).</p>
+<div class="sourceCode" id="cb2"><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">chex</span>)
+<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">magrittr</span>)
+<span class="co">#&gt; Warning: package 'magrittr' was built under R version 3.6.1</span>
+
+<span class="no">results</span> <span class="kw">&lt;-</span> <span class="no">mtcars</span> <span class="kw">%&gt;%</span>
+  <span class="fu"><a href="reference/check_that.html">check_that</a></span>(
+    <span class="no">is.data.frame</span>, <span class="co"># this should PASS</span>
+    <span class="no">is.character</span>,  <span class="co"># this should FAIL</span>
+  )
+
+<span class="fu"><a href="https://rdrr.io/r/base/print.html">print</a></span>(<span class="no">results</span>)
+<span class="co">#&gt; -- CHECKS ---------------------------------------------------------------------</span>
+<span class="co">#&gt; v is.data.frame ... PASS</span>
+<span class="co">#&gt; x is.character ... FAIL</span></pre></div>
+</div>
 </div>
   </div>
 
