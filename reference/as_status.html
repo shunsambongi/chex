@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Create a result — result • chex</title>
+<title>Convert return value to status — as_status • chex</title>
 
 
 <!-- jquery -->
@@ -39,8 +39,9 @@
 
 
 
-<meta property="og:title" content="Create a result — result" />
-<meta property="og:description" content="Create a result" />
+<meta property="og:title" content="Convert return value to status — as_status" />
+<meta property="og:description" content="This is not the same as vctrs::vec_cast() to chex_status. These are the
+types that do_check() will recognize as valid return values." />
 
 
 
@@ -108,34 +109,18 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Create a result</h1>
-    <small class="dont-index">Source: <a href='https://github.com/shunsambongi/chex/blob/master/R/result.R'><code>R/result.R</code></a></small>
-    <div class="hidden name"><code>result.Rd</code></div>
+    <h1>Convert return value to status</h1>
+    <small class="dont-index">Source: <a href='https://github.com/shunsambongi/chex/blob/master/R/check.R'><code>R/check.R</code></a></small>
+    <div class="hidden name"><code>as_status.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Create a result</p>
+    <p>This is not the same as <code><a href='https://vctrs.r-lib.org/reference/vec_cast.html'>vctrs::vec_cast()</a></code> to <code>chex_status</code>. These are the
+types that <code>do_check()</code> will recognize as valid return values.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>result</span>(<span class='no'>status</span>, <span class='no'>description</span>)</pre>
+    <pre class="usage"><span class='fu'>as_status</span>(<span class='no'>x</span>, <span class='no'>...</span>)</pre>
 
-    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
-    <table class="ref-arguments">
-    <colgroup><col class="name" /><col class="desc" /></colgroup>
-    <tr>
-      <th>status</th>
-      <td><p>the result status. This can be one of:</p><ul>
-<li><p>logical vector (<code>TRUE</code> / <code>FALSE</code>)</p></li>
-<li><p>character vector (<code>"PASS"</code>, <code>"FAIL"</code>, etc.)</p></li>
-<li><p><code><a href='preset.html'>chex::PASS</a></code> or <code><a href='preset.html'>chex::FAIL</a></code></p></li>
-<li><p>value of <code><a href='preset.html'>chex::PASS()</a></code> or <code><a href='preset.html'>chex::FAIL()</a></code></p></li>
-</ul></td>
-    </tr>
-    <tr>
-      <th>description</th>
-      <td><p>the description of the result</p></td>
-    </tr>
-    </table>
 
 
   </div>

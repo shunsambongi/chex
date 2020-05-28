@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Create a result — result • chex</title>
+<title>A list of checks — checklist • chex</title>
 
 
 <!-- jquery -->
@@ -39,8 +39,8 @@
 
 
 
-<meta property="og:title" content="Create a result — result" />
-<meta property="og:description" content="Create a result" />
+<meta property="og:title" content="A list of checks — checklist" />
+<meta property="og:description" content="A list of checks" />
 
 
 
@@ -108,32 +108,23 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Create a result</h1>
-    <small class="dont-index">Source: <a href='https://github.com/shunsambongi/chex/blob/master/R/result.R'><code>R/result.R</code></a></small>
-    <div class="hidden name"><code>result.Rd</code></div>
+    <h1>A list of checks</h1>
+    <small class="dont-index">Source: <a href='https://github.com/shunsambongi/chex/blob/master/R/checklist.R'><code>R/checklist.R</code></a></small>
+    <div class="hidden name"><code>checklist.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Create a result</p>
+    <p>A list of checks</p>
     </div>
 
-    <pre class="usage"><span class='fu'>result</span>(<span class='no'>status</span>, <span class='no'>description</span>)</pre>
+    <pre class="usage"><span class='fu'>checklist</span>(<span class='no'>...</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>status</th>
-      <td><p>the result status. This can be one of:</p><ul>
-<li><p>logical vector (<code>TRUE</code> / <code>FALSE</code>)</p></li>
-<li><p>character vector (<code>"PASS"</code>, <code>"FAIL"</code>, etc.)</p></li>
-<li><p><code><a href='preset.html'>chex::PASS</a></code> or <code><a href='preset.html'>chex::FAIL</a></code></p></li>
-<li><p>value of <code><a href='preset.html'>chex::PASS()</a></code> or <code><a href='preset.html'>chex::FAIL()</a></code></p></li>
-</ul></td>
-    </tr>
-    <tr>
-      <th>description</th>
-      <td><p>the description of the result</p></td>
+      <th>...</th>
+      <td><p>checks</p></td>
     </tr>
     </table>
 
