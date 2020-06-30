@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Get/set data fields — data • chex</title>
+<title>Run check — run_check • chex</title>
 
 
 <!-- jquery -->
@@ -39,8 +39,16 @@
 
 
 
-<meta property="og:title" content="Get/set data fields — data" />
-<meta property="og:description" content="Get/set data fields" />
+<meta property="og:title" content="Run check — run_check" />
+<meta property="og:description" content="A check is usually a function that takes one argument and returns a pass or
+fail value. There are a few types which are recognized as pass or fail.
+logical values TRUE and FALSE which are recognized as pass and fail,
+respectively
+chex::PASS or the result of calling chex::PASS() with a reason
+likewise for chex::FAIL
+A result object created by result()
+
+" />
 
 
 
@@ -120,47 +128,47 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Get/set data fields</h1>
-    <small class="dont-index">Source: <a href='https://github.com/shunsambongi/chex/blob/master/R/data.R'><code>R/data.R</code></a></small>
-    <div class="hidden name"><code>data.Rd</code></div>
+    <h1>Run check</h1>
+    <small class="dont-index">Source: <a href='https://github.com/shunsambongi/chex/blob/master/R/check.R'><code>R/check.R</code></a></small>
+    <div class="hidden name"><code>run_check.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Get/set data fields</p>
+    <p>A check is usually a function that takes one argument and returns a pass or
+fail value. There are a few types which are recognized as pass or fail.</p><ul>
+<li><p>logical values <code>TRUE</code> and <code>FALSE</code> which are recognized as pass and fail,
+respectively</p></li>
+<li><p><code><a href='https://rdrr.io/pkg/chex/man/preset.html'>chex::PASS</a></code> or the result of calling <code><a href='https://rdrr.io/pkg/chex/man/preset.html'>chex::PASS()</a></code> with a reason</p></li>
+<li><p>likewise for <code><a href='https://rdrr.io/pkg/chex/man/preset.html'>chex::FAIL</a></code></p></li>
+<li><p>A result object created by <code><a href='https://rdrr.io/pkg/chex/man/result.html'>result()</a></code></p></li>
+</ul>
+
     </div>
 
-    <pre class="usage"><span class='fu'><a href='https://rdrr.io/pkg/chex/man/data.html'>status</a></span>(<span class='kw'>x</span>, <span class='kw'>...</span>)
-
-<span class='fu'><a href='https://rdrr.io/pkg/chex/man/data.html'>status</a></span>(<span class='kw'>x</span>) <span class='op'>&lt;-</span> <span class='kw'>value</span>
-
-<span class='fu'><a href='https://rdrr.io/pkg/chex/man/data.html'>description</a></span>(<span class='kw'>x</span>, <span class='kw'>...</span>)
-
-<span class='fu'><a href='https://rdrr.io/pkg/chex/man/data.html'>description</a></span>(<span class='kw'>x</span>) <span class='op'>&lt;-</span> <span class='kw'>value</span>
-
-<span class='fu'><a href='https://rdrr.io/pkg/chex/man/data.html'>reason</a></span>(<span class='kw'>x</span>, <span class='kw'>...</span>)
-
-<span class='fu'><a href='https://rdrr.io/pkg/chex/man/data.html'>reason</a></span>(<span class='kw'>x</span>) <span class='op'>&lt;-</span> <span class='kw'>value</span>
-
-<span class='fu'><a href='https://rdrr.io/pkg/chex/man/data.html'>duration</a></span>(<span class='kw'>x</span>, <span class='kw'>...</span>)
-
-<span class='fu'><a href='https://rdrr.io/pkg/chex/man/data.html'>duration</a></span>(<span class='kw'>x</span>) <span class='op'>&lt;-</span> <span class='kw'>value</span></pre>
+    <pre class="usage"><span class='fu'><a href='https://rdrr.io/pkg/chex/man/run_check.html'>run_check</a></span>(<span class='kw'>check</span>, <span class='kw'>x</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
+      <th>check</th>
+      <td><p>a object used to check the value of <code>x</code></p></td>
+    </tr>
+    <tr>
       <th>x</th>
-      <td><p>object used to get or set fields</p></td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td><p>other args passed on to methods</p></td>
-    </tr>
-    <tr>
-      <th>value</th>
-      <td><p>new value to set</p></td>
+      <td><p>an object to check</p></td>
     </tr>
     </table>
+
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
+
+    <p>In addition to functions, checks can also be one of the following:</p><ul>
+<li><p>logical values, which get converted to pass or fail values directly</p></li>
+<li><p>formulas, which get converted into check functions using
+<code><a href='https://rlang.r-lib.org/reference/as_function.html'>rlang::as_function()</a></code></p></li>
+<li><p>custom R objects with a method for <code>run_check</code> which returns
+one of the valid pass/fail values mentioned above</p></li>
+</ul>
 
 
   </div>
